@@ -4,7 +4,33 @@
 
 This is a toy robot simulator made using python. The application is a simulation of a toy robot moving on a square table top, of dimensions 5 units x 5 units. There are no other obstructions on the table surface. The robot is free to roam around the surface of the table, but must be prevented from falling to destruction. Any movement that would result in the robot falling from the table must be prevented, however further valid movement commands must still be allowed. The origin (0,0) can be considered to be the SOUTH WEST most corner.
 
-## Command list
+## Table of Contents
+
+- [Install](#install)
+- [Usage](#usage)
+	- [Command list](#command-list)
+- [Exam Unit Tests](#exam-unit-tests)
+	- [Test Output](#test-output)
+- [Other Unit Tests](#other-unit-tests)
+	- [Test Output](#test-output-1)
+- [Extensibility](#extensibility)
+- [License](#license)
+
+## Install
+
+This project was built using python 3.7 but has been tox tested to be working on 3.6 and 3.8. Default python libraries were used thus no need to install additional libraries.
+
+## Usage
+
+Clone this repository on to your local machine with Python version 3.6/3.7/3.8 and call the `start_app.py` file
+
+```Python
+cd <local_clone_path>
+cd app
+python3 start_app.py
+```
+
+### Command list
 
 - `PLACE x,y,f`
 	- Places the robot on the board
@@ -18,7 +44,7 @@ This is a toy robot simulator made using python. The application is a simulation
 	- Move one tile where the robot is facing
 - `LEFT`
 	- Rotate the robot 90 degrees to the left
-- `Right`
+- `RIGHT`
 	- Rotate the robot 90 degrees to the right
 - `REPORT`
 	- Print current state of robot in x,y,f format
@@ -27,31 +53,6 @@ This is a toy robot simulator made using python. The application is a simulation
 	- Exit the application
 
 It is required that the first command to the robot is a PLACE command, after that, any sequence of commands may be issued, in any order, including another PLACE command. Running another PLACE command while the robot is already on the board will relocate the current robot to the new location and new facing orientation. The application should discard all commands in the sequence until a valid PLACE command has been executed.
-
-## Table of Contents
-
-- [Install](#install)
-- [Usage](#usage)
-- [Exam Unit Tests](#exam-unit-tests)
-	- [Test Output](#test-output)
-- [Other Unit Tests](#other-unit-tests)
-	- [Test Output](#test-output-1)
-- [Extensibility](#extensibility)
-- [License](#license)
-
-## Install
-
-This project was built using python 3.7 but has been tox tested to be working on 3.6 and 3.8. Default python libraries were used thus, no need to install additional libraries.
-
-## Usage
-
-Clone this repository on to your local machine with Python version 3.6/3.7/3.8 and call the `start_app.py` file
-
-```Python
-cd <local_clone_path>
-cd app
-python3 start_app.py
-```
 
 ## Exam Unit Tests
 
